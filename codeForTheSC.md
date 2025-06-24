@@ -99,8 +99,13 @@ echo "All refreshed now!"
 #SBATCH --error=./error.<specific analysis name>.txt
 #SBATCH --qos=phyto
 
-/home/summerschool/anaconda3/envs/summerschool/bin/trimmomatic PE -threads 16 -phred33 /home/summerschool/summerschoolFolder/<name your folder>/<name your file> /home/summerschool/summerschoolFolder/<name your folder>/<name your file> \
-/home/summerschool/summerschoolFolder/<name your folder>/<name your file>_1_paired.fq.gz /home/summerschool/summerschoolFolder/<name your folder>/<name your file>_1_unpaired.fq.gz /home/summerschool/summerschoolFolder/<name your folder>/<name your file>_1_paired.fq.gz /home/summerschool/summerschoolFolder/<name your folder>/<name your file>_2_unpaired.fq.gz \
+/home/summerschool/anaconda3/envs/summerschool/bin/trimmomatic PE -threads 16 -phred33 \
+/home/summerschool/summerschoolFolder/<name your folder>/<name your file> \
+/home/summerschool/summerschoolFolder/<name your folder>/<name your file> \
+/home/summerschool/summerschoolFolder/<name your folder>/<name your file>_1_paired.fq.gz \
+/home/summerschool/summerschoolFolder/<name your folder>/<name your file>_1_unpaired.fq.gz \
+/home/summerschool/summerschoolFolder/<name your folder>/<name your file>_1_paired.fq.gz \
+/home/summerschool/summerschoolFolder/<name your folder>/<name your file>_2_unpaired.fq.gz \
 ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.39-2/adapters/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
 ```
 
