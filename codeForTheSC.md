@@ -135,7 +135,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 #SBATCH --error=./error.<specific analysis name>.txt
 #SBATCH --qos=phyto
 
-/home/summerschool/anaconda3/envs/nanoplot/bin/NanoPlot -o <folder name> -t 16 --fastq <reads1.fastq.gz>
+/home/summerschool/anaconda3/envs/summerschool/bin/flash -t 16   <reads1.fastq.gz> <reads2.fastq.gz>
 ```
 
 # SBATCH file for spades
