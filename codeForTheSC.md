@@ -7,6 +7,12 @@ ssh <user name>@79.49.53.20
 ssh <user name>@10.144.91.192
 ```
 
+# To remove a file
+
+```bash
+rm <name file>
+```
+
 # To enter the folder where the data are
 
 ```bash
