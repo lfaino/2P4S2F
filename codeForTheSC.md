@@ -150,7 +150,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 #SBATCH --error=./error.<specific analysis name>.txt
 #SBATCH --qos=phyto
 
-/usr/bin/spades -o <folder name> -t 16 --fastq <reads1.fastq.gz>
+/usr/bin/spades -o <folder name> -t 16 -1 <reads1.fastq.gz> -2 <reads2.fastq.gz>
 ```
 
 # SBATCH file for hifiasm
