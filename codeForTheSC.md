@@ -100,8 +100,8 @@ echo "All refreshed now!"
 #SBATCH --qos=phyto
 
 /home/summerschool/anaconda3/envs/summerschool/bin/trimmomatic PE -threads 16 -phred33 \
-/home/summerschool/summerschoolFolder/<name your folder>/<name your file> \
-/home/summerschool/summerschoolFolder/<name your folder>/<name your file> \
+/home/summerschool/summerschoolFolder/<name your folder>/<name your file>.1.fastq.gz \
+/home/summerschool/summerschoolFolder/<name your folder>/<name your file>.1.fastq.gz \
 /home/summerschool/summerschoolFolder/<name your folder>/<name your file>_1_paired.fq.gz \
 /home/summerschool/summerschoolFolder/<name your folder>/<name your file>_1_unpaired.fq.gz \
 /home/summerschool/summerschoolFolder/<name your folder>/<name your file>_1_paired.fq.gz \
