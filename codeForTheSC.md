@@ -11,3 +11,7 @@ if you are in "summerschool@zeuspv:$~/"
 ```bash
 cd summerschoolFolder
 ```
+
+```bash
+cd /home/summerschool/summerschoolFolder --> cd ~/summerschoolFolder;
+```
