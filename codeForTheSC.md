@@ -105,3 +105,63 @@ ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLE
 
 /home/summerschool/anaconda3/envs/nanoplot/bin/NanoPlot -o <folder name> -t 16 --fastq <reads1.fastq.gz>
 ```
+# SBATCH file for flash
+
+```text
+#!/bin/bash
+# the name of your job
+#SBATCH --job-name=<job name>
+#SBATCH --cpus-per-task=16
+# this is the file your ourput and errors go to
+#SBATCH --output=./output.<specific analysis name>.txt
+#SBATCH --error=./error.<specific analysis name>.txt
+#SBATCH --qos=phyto
+
+/home/summerschool/anaconda3/envs/nanoplot/bin/NanoPlot -o <folder name> -t 16 --fastq <reads1.fastq.gz>
+```
+
+# SBATCH file for spades
+
+```text
+#!/bin/bash
+# the name of your job
+#SBATCH --job-name=<job name>
+#SBATCH --cpus-per-task=16
+# this is the file your ourput and errors go to
+#SBATCH --output=./output.<specific analysis name>.txt
+#SBATCH --error=./error.<specific analysis name>.txt
+#SBATCH --qos=phyto
+
+/usr/bin/spades -o <folder name> -t 16 --fastq <reads1.fastq.gz>
+```
+
+# SBATCH file for hifiasm
+
+```text
+#!/bin/bash
+# the name of your job
+#SBATCH --job-name=<job name>
+#SBATCH --cpus-per-task=16
+# this is the file your ourput and errors go to
+#SBATCH --output=./output.<specific analysis name>.txt
+#SBATCH --error=./error.<specific analysis name>.txt
+#SBATCH --qos=phyto
+
+/home/summerschool/anaconda3/envs/nanoplot/bin/NanoPlot -o <folder name> -t 16 --fastq <reads1.fastq.gz>
+```
+
+# SBATCH file for verkko
+
+```text
+#!/bin/bash
+# the name of your job
+#SBATCH --job-name=<job name>
+#SBATCH --cpus-per-task=16
+# this is the file your ourput and errors go to
+#SBATCH --output=./output.<specific analysis name>.txt
+#SBATCH --error=./error.<specific analysis name>.txt
+#SBATCH --qos=phyto
+
+/home/summerschool/anaconda3/envs/nanoplot/bin/NanoPlot -o <folder name> -t 16 --fastq <reads1.fastq.gz>
+```
+
