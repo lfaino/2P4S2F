@@ -1,3 +1,5 @@
 to move to a folder type
 
-"cd summerschoolFolder"
+```bash
+cd summerschoolFolder
+```
