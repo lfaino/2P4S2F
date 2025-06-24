@@ -14,10 +14,10 @@ rm <name file>
 ```
 
 
-# To move a file to a folder
+# To copy a file to a folder
 
 ```bash
- mv /home/summerschool/summerschoolFolder/testData/fusariumCREA/14_2.fq.gz  /home/summerschool/summerschoolFolder/<your foler name>
+cp /home/summerschool/summerschoolFolder/testData/fusariumCREA/14_2.fq.gz  /home/summerschool/summerschoolFolder/<your foler name>
 ```
 
 # To enter the folder where the data are
