@@ -15,7 +15,12 @@ cd /home/summerschool/summerschoolFolder
 
 or 
 
-if you are in "summerschool@zeuspv:$~/"
+if you are in 
+
+```text
+summerschool@zeuspv:$~/
+```
+
 
 ```bash
 cd summerschoolFolder
