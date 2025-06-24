@@ -104,7 +104,7 @@ echo "All refreshed now!"
 /home/summerschool/summerschoolFolder/<name your folder>/<input file>.2.fastq.gz \
 /home/summerschool/summerschoolFolder/<name your folder>/<name your file>_1_paired.fq.gz \
 /home/summerschool/summerschoolFolder/<name your folder>/<name your file>_1_unpaired.fq.gz \
-/home/summerschool/summerschoolFolder/<name your folder>/<name your file>_1_paired.fq.gz \
+/home/summerschool/summerschoolFolder/<name your folder>/<name your file>_2_paired.fq.gz \
 /home/summerschool/summerschoolFolder/<name your folder>/<name your file>_2_unpaired.fq.gz \
 ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.39-2/adapters/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
 ```
