@@ -74,3 +74,34 @@ echo "All refreshed now!"
 -o /home/summerschool/summerschoolFolder/<your folder name>/   \
 /home/summerschool/summerschoolFolder/testData/fusariumCREA/14_2.fq.gz
 ```
+# SBATCH file for trimmomatic
+
+```text
+#!/bin/bash
+# the name of your job
+#SBATCH --job-name=trimLF
+#SBATCH --cpus-per-task=16
+# this is the file your ourput and errors go to
+#SBATCH --output=./output.FQC.txt
+#SBATCH --error=./error.FQC.txt
+#SBATCH --qos=phyto
+
+trimmomatic PE -threads 16 -phred33 /home/summerschool/summerschoolFolder/testData/15_1.fq.gz /home/summerschool/summerschoolFolder/testData/15_2.fq.gz \
+/home/summerschool/summerschoolFolder/amenicucci/15_1_paired.fq.gz /home/summerschool/summerschoolFolder/amenicucci/15_1_unpaired.fq.gz /home/summerschool/summerschoolFolder/amenicucci/15_2_paired.fq.gz /home/summerschool/summerschoolFolder/amenicucci/15_2_unpaired.fq.gz \
+ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
+```
+
+# SBATCH file for NanoPlot
+
+```text
+#!/bin/bash
+# the name of your job
+#SBATCH --job-name=trimLF
+#SBATCH --cpus-per-task=16
+# this is the file your ourput and errors go to
+#SBATCH --output=./output.FQC.txt
+#SBATCH --error=./error.FQC.txt
+#SBATCH --qos=phyto
+
+/home/summerschool/anaconda3/envs/nanoplot/bin/NanoPlot -o <folder name> -t 2 --fastq <reads1.fastq.gz>
+```
