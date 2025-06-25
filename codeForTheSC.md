@@ -172,8 +172,20 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 
 /home/summerschool/anaconda3/envs/summerschool/bin/hifiasm -o <output name> -t16 --ont  <reads1.fastq.gz>
 ```
+## SBATCH file for canu
 
+```text
+#!/bin/bash
+# the name of your job
+#SBATCH --job-name=<job name>
+#SBATCH --cpus-per-task=16
+# this is the file your ourput and errors go to
+#SBATCH --output=./output.<specific analysis name>.txt
+#SBATCH --error=./error.<specific analysis name>.txt
+#SBATCH --qos=phyto
+/home/summerschool/anaconda3/bin/canu -p <assembly-prefix> -d <assembly-directory> genomeSize=<number>[g|m|k] -nanopore-raw  *fastq
 
+```
 
 ## SBATCH file for verkko
 
