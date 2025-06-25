@@ -182,6 +182,22 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 
 /home/summerschool/anaconda3/envs/verkko/bin/verkko --grid -d <output folder name> --nano <fastq file> --hifi <corrected reads fastq>
 ```
+
+# SBATCH file for masurca
+
+```text
+#!/bin/bash
+# the name of your job
+#SBATCH --job-name=<job name>
+#SBATCH --cpus-per-task=32
+# this is the file your ourput and errors go to
+#SBATCH --output=./output.<specific analysis name>.txt
+#SBATCH --error=./error.<specific analysis name>.txt
+#SBATCH --qos=phyto
+
+/home/summerschool/anaconda3/envs/summerschool/bin/masurca -t 32 -i </path_to/pe_R1.fa,/path_to/pe_R2.fa> -r </path_to/nanopore.fastq.gz>
+```
+
 # SBATCH file for bwa
 
 ```text
