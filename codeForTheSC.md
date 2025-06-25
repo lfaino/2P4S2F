@@ -7,20 +7,20 @@ ssh <user name>@79.49.53.20
 ssh <user name>@10.144.91.192
 ```
 
-# To remove a file
+## To remove a file
 
 ```bash
 rm <name file>
 ```
 
 
-# To copy a file to a folder
+## To copy a file to a folder
 
 ```bash
 cp /home/summerschool/summerschoolFolder/testData/fusariumCREA/14_2.fq.gz  /home/summerschool/summerschoolFolder/<your foler name>
 ```
 
-# To enter the folder where the data are
+## To enter the folder where the data are
 
 ```bash
 cd /home/summerschool/summerschoolFolder
@@ -43,13 +43,13 @@ cd summerschoolFolder
 cd /home/summerschool/summerschoolFolder --> cd ~/summerschoolFolder
 ```
 
-# To modify a file in bash, you can use
+## To modify a file in bash, you can use
 
 ```bash
 nano <file name>
 ```
 
-# The first sbatch file we made lok like this
+## The first sbatch file we made lok like this
 
 ```text
 #!/bin/bash
@@ -70,8 +70,9 @@ sleep 30
 echo $SLURMD_NODENAME
 echo "All refreshed now!"
 ```
+# SHORT READS
 
-# SBATCH file for fastqc
+## SBATCH file for fastqc
 
 ```text
 #!/bin/bash
@@ -87,7 +88,7 @@ echo "All refreshed now!"
 -o /home/summerschool/summerschoolFolder/<your folder name>/   \
 /home/summerschool/summerschoolFolder/testData/fusariumCREA/14_2.fq.gz
 ```
-# SBATCH file for trimmomatic
+## SBATCH file for trimmomatic
 
 ```text
 #!/bin/bash
@@ -108,7 +109,7 @@ echo "All refreshed now!"
 /home/summerschool/summerschoolFolder/<name your folder>/<name your file>_2_unpaired.fq.gz \
 ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.39-2/adapters/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
 ```
-# SBATCH file for flash
+## SBATCH file for flash
 
 ```text
 #!/bin/bash
@@ -123,7 +124,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 /home/summerschool/anaconda3/envs/summerschool/bin/flash -t 16   <reads1.fastq.gz> <reads2.fastq.gz>
 ```
 
-# SBATCH file for spades
+## SBATCH file for spades
 
 ```text
 #!/bin/bash
@@ -138,7 +139,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 /usr/bin/spades -o <folder name> -t 16 -1 <reads1.fastq.gz> -2 <reads2.fastq.gz>
 ```
 
-# SBATCH file for NanoPlot
+## SBATCH file for NanoPlot
 
 ```text
 #!/bin/bash
@@ -153,7 +154,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 /home/summerschool/anaconda3/envs/nanoplot/bin/NanoPlot -o <folder name> -t 16 --fastq <reads1.fastq.gz>
 ```
 
-# SBATCH file for hifiasm
+## SBATCH file for hifiasm
 
 ```text
 #!/bin/bash
@@ -167,7 +168,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 
 /home/summerschool/anaconda3/envs/summerschool/bin/hifiasm -o <output name> -t16 --ont  <reads1.fastq.gz>
 ```
-# SBATCH file for quast
+## SBATCH file for quast
 
 ```text
 #!/bin/bash
@@ -183,7 +184,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 ```
 
 
-# SBATCH file for verkko
+## SBATCH file for verkko
 
 ```text
 #!/bin/bash
@@ -198,7 +199,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 /home/summerschool/anaconda3/envs/verkko/bin/verkko --grid -d <output folder name> --nano <fastq file> --hifi <corrected reads fastq>
 ```
 
-# SBATCH file for masurca
+## SBATCH file for masurca
 
 ```text
 #!/bin/bash
@@ -213,7 +214,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 /home/summerschool/anaconda3/envs/summerschool/bin/masurca -t 32 -i </path_to/pe_R1.fa,/path_to/pe_R2.fa> -r </path_to/nanopore.fastq.gz>
 ```
 
-# SBATCH file for bwa index
+## SBATCH file for bwa index
 
 ```text
 #!/bin/bash
@@ -228,7 +229,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 /home/summerschool/anaconda3/envs/summerschool/bin/bwa index <genome sequence>
 ```
 
-# SBATCH file for bwa mem
+## SBATCH file for bwa mem
 
 ```text
 #!/bin/bash
