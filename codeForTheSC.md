@@ -198,7 +198,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 /home/summerschool/anaconda3/envs/summerschool/bin/masurca -t 32 -i </path_to/pe_R1.fa,/path_to/pe_R2.fa> -r </path_to/nanopore.fastq.gz>
 ```
 
-# SBATCH file for bwa
+# SBATCH file for bwa index
 
 ```text
 #!/bin/bash
@@ -213,7 +213,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 /home/summerschool/anaconda3/envs/summerschool/bin/bwa index <genome sequence>
 ```
 
-# SBATCH file for bwa
+# SBATCH file for bwa mem
 
 ```text
 #!/bin/bash
