@@ -165,7 +165,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 #SBATCH --error=./error.<specific analysis name>.txt
 #SBATCH --qos=phyto
 
-/home/summerschool/anaconda3/envs/nanoplot/bin/NanoPlot -o <folder name> -t 16 --fastq <reads1.fastq.gz>
+/home/summerschool/anaconda3/envs/nanoplot/bin/NanoPlot -o <output name> -t16 --ont <reads1.fastq.gz>
 ```
 
 # SBATCH file for verkko
