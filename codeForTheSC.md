@@ -180,7 +180,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 #SBATCH --error=./error.<specific analysis name>.txt
 #SBATCH --qos=phyto
 
-verkko -d <output folder name> --nano <fastq file> 
+/home/summerschool/anaconda3/envs/verkko/bin/verkko -d <output folder name> --nano <fastq file> 
 ```
 # SBATCH file for bwa
 
