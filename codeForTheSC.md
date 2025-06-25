@@ -183,6 +183,9 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 /home/summerschool/anaconda3/envs/quast/bin/quast.py -s -o <output name folder> -t3 <genome 1 fasta> <genome 2 fasta> <genome N fasta>
 ```
 
+```text
+/home/summerschool/summerschoolFolder/testData
+```
 
 ## SBATCH file for verkko
 
