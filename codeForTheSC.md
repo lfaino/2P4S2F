@@ -153,6 +153,10 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 
 /home/summerschool/anaconda3/envs/nanoplot/bin/NanoPlot -o <folder name> -t 16 --fastq <reads1.fastq.gz>
 ```
+# path for the reads to use
+```text
+/home/summerschool/summerschoolFolder/testData
+```
 
 ## SBATCH file for hifiasm
 
@@ -169,10 +173,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 /home/summerschool/anaconda3/envs/summerschool/bin/hifiasm -o <output name> -t16 --ont  <reads1.fastq.gz>
 ```
 
-# path for the reads to use
-```text
-/home/summerschool/summerschoolFolder/testData
-```
+
 
 ## SBATCH file for verkko
 
