@@ -211,7 +211,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 #SBATCH --error=./error.<specific analysis name>.txt
 #SBATCH --qos=phyto
 
-/home/summerschool/anaconda3/bin/flye --out-dir <folder name> --nano-raw <corrected reads fastq>
+/home/summerschool/anaconda3/bin/flye --threads 16 --out-dir <folder name> --nano-raw <corrected reads fastq>
 ```
 
 
@@ -264,15 +264,6 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 ## SBATCH file for bwa mem
 
 ```text
-#!/bin/bash
-# the name of your job
-#SBATCH --job-name=<job name>
-#SBATCH --cpus-per-task=16
-# this is the file your ourput and errors go to
-#SBATCH --output=./output.<specific analysis name>.txt
-#SBATCH --error=./error.<specific analysis name>.txt
-#SBATCH --qos=phyto
-
-/home/summerschool/anaconda3/envs/summerschool/bin/bwa mem <genome sequence> <1 fastq> <2 fastq>
+![img.png](img.png)
 
 ```
