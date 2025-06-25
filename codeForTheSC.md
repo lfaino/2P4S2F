@@ -210,10 +210,8 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 #SBATCH --error=./error.<specific analysis name>.txt
 #SBATCH --qos=phyto
 
-/home/summerschool/anaconda3/envs/summerschool/bin/pilon --genome <genome name> --output <name of files> --frags <frags.bam>
-
+/home/summerschool/anaconda3/envs/summerschool/bin/bwa index <genome sequence>
 ```
-
 
 # SBATCH file for bwa
 
@@ -227,6 +225,6 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 #SBATCH --error=./error.<specific analysis name>.txt
 #SBATCH --qos=phyto
 
-pilon --genome genome.fasta --output <name of files> --frags <frags.bam>
+/home/summerschool/anaconda3/envs/summerschool/bin/bwa mem <genome sequence> <1 fastq> <2 fastq>
 
 ```
