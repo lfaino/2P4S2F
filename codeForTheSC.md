@@ -168,21 +168,8 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 
 /home/summerschool/anaconda3/envs/summerschool/bin/hifiasm -o <output name> -t16 --ont  <reads1.fastq.gz>
 ```
-## SBATCH file for quast
 
-```text
-#!/bin/bash
-# the name of your job
-#SBATCH --job-name=<job name>
-#SBATCH --cpus-per-task=3
-# this is the file your ourput and errors go to
-#SBATCH --output=./output.<specific analysis name>.txt
-#SBATCH --error=./error.<specific analysis name>.txt
-#SBATCH --qos=phyto
-
-/home/summerschool/anaconda3/envs/quast/bin/quast.py -s -o <output name folder> -t3 <genome 1 fasta> <genome 2 fasta> <genome N fasta>
-```
-
+# path for the reads to use
 ```text
 /home/summerschool/summerschoolFolder/testData
 ```
@@ -246,6 +233,20 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 #SBATCH --qos=phyto
 
 /home/summerschool/anaconda3/envs/summerschool/bin/bwa index <genome sequence>
+```
+## SBATCH file for quast
+
+```text
+#!/bin/bash
+# the name of your job
+#SBATCH --job-name=<job name>
+#SBATCH --cpus-per-task=3
+# this is the file your ourput and errors go to
+#SBATCH --output=./output.<specific analysis name>.txt
+#SBATCH --error=./error.<specific analysis name>.txt
+#SBATCH --qos=phyto
+
+/home/summerschool/anaconda3/envs/quast/bin/quast.py -s -o <output name folder> -t3 <genome 1 fasta> <genome 2 fasta> <genome N fasta>
 ```
 
 ## SBATCH file for bwa mem
