@@ -196,8 +196,24 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 #SBATCH --error=./error.<specific analysis name>.txt
 #SBATCH --qos=phyto
 
-/home/summerschool/anaconda3/envs/verkko/bin/verkko --grid -d <output folder name> --nano <fastq file> --hifi <corrected reads fastq>
+/home/summerschool/anaconda3/envs/verkko/bin/verkko --grid -d <output folder name> --hifi <nanopore reads fastq>
 ```
+
+## SBATCH file for flye
+
+```text
+#!/bin/bash
+# the name of your job
+#SBATCH --job-name=<job name>
+#SBATCH --cpus-per-task=16
+# this is the file your ourput and errors go to
+#SBATCH --output=./output.<specific analysis name>.txt
+#SBATCH --error=./error.<specific analysis name>.txt
+#SBATCH --qos=phyto
+
+/home/summerschool/anaconda3/bin/flye --out-dir <folder name> --nano-raw <corrected reads fastq>
+```
+
 
 ## SBATCH file for masurca
 
