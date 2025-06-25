@@ -180,7 +180,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 #SBATCH --error=./error.<specific analysis name>.txt
 #SBATCH --qos=phyto
 
-/home/summerschool/anaconda3/envs/quast/bin/quast -s -o <output name folder> -t3 <genome 1 fasta> <genome 2 fasta> <genome N fasta>
+/home/summerschool/anaconda3/envs/quast/bin/quast.py -s -o <output name folder> -t3 <genome 1 fasta> <genome 2 fasta> <genome N fasta>
 ```
 
 
