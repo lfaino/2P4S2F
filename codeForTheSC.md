@@ -108,21 +108,6 @@ echo "All refreshed now!"
 /home/summerschool/summerschoolFolder/<name your folder>/<name your file>_2_unpaired.fq.gz \
 ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.39-2/adapters/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
 ```
-
-# SBATCH file for NanoPlot
-
-```text
-#!/bin/bash
-# the name of your job
-#SBATCH --job-name=<job name>
-#SBATCH --cpus-per-task=16
-# this is the file your ourput and errors go to
-#SBATCH --output=./output.<specific analysis name>.txt
-#SBATCH --error=./error.<specific analysis name>.txt
-#SBATCH --qos=phyto
-
-/home/summerschool/anaconda3/envs/nanoplot/bin/NanoPlot -o <folder name> -t 16 --fastq <reads1.fastq.gz>
-```
 # SBATCH file for flash
 
 ```text
@@ -151,6 +136,21 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 #SBATCH --qos=phyto
 
 /usr/bin/spades -o <folder name> -t 16 -1 <reads1.fastq.gz> -2 <reads2.fastq.gz>
+```
+
+# SBATCH file for NanoPlot
+
+```text
+#!/bin/bash
+# the name of your job
+#SBATCH --job-name=<job name>
+#SBATCH --cpus-per-task=16
+# this is the file your ourput and errors go to
+#SBATCH --output=./output.<specific analysis name>.txt
+#SBATCH --error=./error.<specific analysis name>.txt
+#SBATCH --qos=phyto
+
+/home/summerschool/anaconda3/envs/nanoplot/bin/NanoPlot -o <folder name> -t 16 --fastq <reads1.fastq.gz>
 ```
 
 # SBATCH file for hifiasm
