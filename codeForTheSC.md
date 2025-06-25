@@ -167,7 +167,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 
 /home/summerschool/anaconda3/envs/summerschool/bin/hifiasm -o <output name> -t16 --ont  <reads1.fastq.gz>
 ```
-# SBATCH file for hifiasm
+# SBATCH file for quast
 
 ```text
 #!/bin/bash
