@@ -299,7 +299,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 ## SBATCH file for augustus parallel
 
 ```bash
-awk '/^>/{s=++d".fa"} {print > s}' <genome.fa>
+/home/summerschool/anaconda3/envs/medaka/bin/seqkit split  -i  <genome.fa>
 ```
 
 ```text
