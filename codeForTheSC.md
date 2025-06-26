@@ -320,7 +320,5 @@ BASENAME=$(basename $FASTA_FILE .fasta)
 
 # Esegui AUGUSTUS
 /home/summerschool/anaconda3/envs/summerschool/bin/augustus --species=fusarium $FASTA_FILE > FASTA_DIR/${BASENAME}.gff
-
-
 ```
 
