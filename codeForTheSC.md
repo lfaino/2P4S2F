@@ -276,7 +276,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 #SBATCH --qos=phyto
 
 /home/summerschool/anaconda3/envs/summerschool/bin/bwa mem -t 16 <genome sequence> <1 fastq> <2 fastq> | \ 
-/home/summerschool/anaconda3/envs/summerschool/bin/samtools sort -O BAM -o alingment.sorted.bam -@ 16
+/home/summerschool/anaconda3/envs/summerschool/bin/samtools sort -O BAM -o alingment.sorted.bam --write-index -@ 16
 
 ```
 
