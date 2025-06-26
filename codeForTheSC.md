@@ -280,6 +280,22 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 
 ```
 
+## SBATCH file for pilon
+
+```text
+#!/bin/bash
+# the name of your job
+#SBATCH --job-name=<job name>
+#SBATCH --cpus-per-task=16
+# this is the file your ourput and errors go to
+#SBATCH --output=./output.<specific analysis name>.txt
+#SBATCH --error=./error.<specific analysis name>.txt
+#SBATCH --qos=phyto
+
+/home/summerschool/anaconda3/envs/summerschool/bin/pilon --genome genome.fasta --output <prefix corrected data> --frags <frags.bam>
+```
+
+
 ## SBATCH file for augustus parallel
 
 ```bash
@@ -308,3 +324,4 @@ BASENAME=$(basename $FASTA_FILE .fa)
 
 
 ```
+
