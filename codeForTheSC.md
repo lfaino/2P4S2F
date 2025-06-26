@@ -307,8 +307,8 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 #SBATCH --job-name=augustus_array
 #SBATCH --array=1-NNN           # Modifica con il numero di contigs
 #SBATCH --cpus-per-task=1
-#SBATCH --output=logs/augustus_%A_%a.out
-#SBATCH --error=logs/augustus_%A_%a.err
+#SBATCH --output=augustus_%A_%a.out
+#SBATCH --error=augustus_%A_%a.err
 
 
 # Directory con i file .fa divisi
