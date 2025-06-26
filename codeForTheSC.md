@@ -319,6 +319,6 @@ FASTA_FILE=$(ls $FASTA_DIR/*.fasta | sed -n ${SLURM_ARRAY_TASK_ID}p)
 BASENAME=$(basename $FASTA_FILE .fasta)
 
 # Esegui AUGUSTUS
-/home/summerschool/anaconda3/envs/summerschool/bin/augustus --species=fusarium $FASTA_FILE > FASTA_DIR/${BASENAME}.gff
+/home/summerschool/anaconda3/envs/summerschool/bin/augustus --species=fusarium $FASTA_FILE > $FASTA_DIR/${BASENAME}.gff
 ```
 
