@@ -278,9 +278,31 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 
 ```
 
-## SBATCH file for bwa mem
+## SBATCH file for augustus parallel
+
+```bash
+awk '/^>/{s=++d".fa"} {print > s}' <genome.fa>
+```
 
 ```text
-![img.png](img.png)
+#!/bin/bash
+#SBATCH --job-name=augustus_array
+#SBATCH --array=1-NNN           # Modifica con il numero di contigs
+#SBATCH --cpus-per-task=1
+#SBATCH --output=logs/augustus_%A_%a.out
+#SBATCH --error=logs/augustus_%A_%a.err
+
+
+# Directory con i file .fa divisi
+FASTA_DIR="/path/to/split_fasta"
+OUT_DIR="/path/to/output"
+
+# File corrente da processare
+FASTA_FILE=$(ls $FASTA_DIR/*.fa | sed -n ${SLURM_ARRAY_TASK_ID}p)
+BASENAME=$(basename $FASTA_FILE .fa)
+
+# Esegui AUGUSTUS
+/home/summerschool/anaconda3/envs/summerschool/bin/augustus --species=fusarium $FASTA_FILE > $OUT_DIR/${BASENAME}.gff
+
 
 ```
