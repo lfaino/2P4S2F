@@ -274,7 +274,8 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 #SBATCH --error=./error.<specific analysis name>.txt
 #SBATCH --qos=phyto
 
-/home/summerschool/anaconda3/envs/summerschool/bin/bwa mem <genome sequence> <1 fastq> <2 fastq>
+/home/summerschool/anaconda3/envs/summerschool/bin/bwa mem -t 16 <genome sequence> <1 fastq> <2 fastq> | \ 
+samtools sort -O BAM -o alingment.sorted.bam -@ 16
 
 ```
 
