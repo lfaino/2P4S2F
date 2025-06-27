@@ -360,7 +360,7 @@ READ2=/home/summerschool/summerschoolFolder/aseemblyFolder/DR-15_2.fq.gz
 THREADS=12
 
 # Run STAR in alignment mode
-/home/summerschool/anaconda3/envs/summerschool/bin/STAR
+/home/summerschool/anaconda3/envs/summerschool/bin/STAR \
      --runThreadN $THREADS \
      --genomeDir $GENOME_DIR \
      --readFilesCommand zcat \
