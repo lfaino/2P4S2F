@@ -370,3 +370,20 @@ THREADS=12
 
 
 ```
+
+```text
+
+
+#!/bin/bash
+# the name of your job
+#SBATCH --job-name=<job name>
+#SBATCH --cpus-per-task=16
+# this is the file your ourput and errors go to
+#SBATCH --output=./output.<specific analysis name>.txt
+#SBATCH --error=./error.<specific analysis name>.txt
+#SBATCH --qos=phyto
+
+
+/home/summerschool/anaconda3/envs/summerschool/bin/featureCounts -T 8 -p -t mRNA -g ID -a <gff> -o <OUT> <SAM>
+
+```
