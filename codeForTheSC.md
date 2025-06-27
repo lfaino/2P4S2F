@@ -370,6 +370,7 @@ THREADS=12
 
 
 ```
+## SBATCH file for featureCounts
 
 ```text
 
