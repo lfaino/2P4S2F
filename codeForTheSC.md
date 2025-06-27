@@ -388,3 +388,6 @@ THREADS=12
 /home/summerschool/anaconda3/envs/summerschool/bin/featureCounts -T 8 -p -t mRNA -g ID -a <gff> -o <OUT> <SAM>
 
 ```
+
+
+[Survay](https://docs.google.com/forms/d/1rLbg846qwNcR7s0iEq6qJoD842Z3xZOvjS31BcV5zQY/edit?ts=685e3a80)
