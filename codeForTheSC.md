@@ -385,7 +385,7 @@ THREADS=12
 #SBATCH --qos=phyto
 
 
-/home/summerschool/anaconda3/envs/summerschool/bin/featureCounts -T 8 -p -t mRNA -g ID -a <gff> -o <OUT> <SAM>
+/home/summerschool/anaconda3/envs/summerschool/bin/featureCounts -T 8 -p -t mRNA -g Parent -a <gff> -o <OUT> <SAM>
 
 ```
 
