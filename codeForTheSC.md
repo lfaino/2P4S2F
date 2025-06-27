@@ -305,7 +305,6 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 ```text
 #!/bin/bash
 #SBATCH --job-name=augustus_array
-#SBATCH --array=1-NNN           # Modifica con il numero di contigs
 #SBATCH --cpus-per-task=1
 #SBATCH --output=augustus_%A_%a.out
 #SBATCH --error=augustus_%A_%a.err
@@ -315,7 +314,7 @@ ILLUMINACLIP:/home/summerschool/anaconda3/envs/summerschool/share/trimmomatic-0.
 FASTA_DIR="/path/to/split_fasta"
 
 # File corrente da processare
-FASTA_FILE=$(ls $FASTA_DIR/*.fasta | sed -n ${SLURM_ARRAY_TASK_ID}p)
+FASTA_FILE=$(ls $FASTA_DIR/*.fasta | sed -n ${SLURM_JOB_ID}p)
 BASENAME=$(basename $FASTA_FILE .fasta)
 
 # Esegui AUGUSTUS
@@ -373,8 +372,6 @@ THREADS=12
 ## SBATCH file for featureCounts
 
 ```text
-
-
 #!/bin/bash
 # the name of your job
 #SBATCH --job-name=<job name>
