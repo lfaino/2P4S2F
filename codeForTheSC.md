@@ -390,4 +390,4 @@ THREADS=12
 ```
 
 
-[Survay](https://docs.google.com/forms/d/1rLbg846qwNcR7s0iEq6qJoD842Z3xZOvjS31BcV5zQY/edit?ts=685e3a80)
+[Survaey](https://docs.google.com/forms/d/1rLbg846qwNcR7s0iEq6qJoD842Z3xZOvjS31BcV5zQY/edit?ts=685e3a80)
