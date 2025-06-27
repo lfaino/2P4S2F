@@ -355,8 +355,8 @@ BASENAME=$(basename $FASTA_FILE .fasta)
 
 # Define variables
 GENOME_DIR=<folder index destination>
-READ1=/home/summerschool/summerschoolFolder/assemblyFolder/DR-15_1.fq.gz
-READ2=/home/summerschool/summerschoolFolder/aseemblyFolder/DR-15_2.fq.gz
+READ1="/home/summerschool/summerschoolFolder/assemblyFolder/DR-15_1.fq.gz"
+READ2="/home/summerschool/summerschoolFolder/aseemblyFolder/DR-15_2.fq.gz"
 THREADS=12
 
 # Run STAR in alignment mode
