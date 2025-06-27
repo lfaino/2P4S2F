@@ -322,3 +322,35 @@ BASENAME=$(basename $FASTA_FILE .fasta)
 /home/summerschool/anaconda3/envs/summerschool/bin/augustus --species=fusarium $FASTA_FILE > $FASTA_DIR/${BASENAME}.gff
 ```
 
+## SBATCH file for STAR index
+
+```text
+#!/bin/bash
+# the name of your job
+#SBATCH --job-name=<job name>
+#SBATCH --cpus-per-task=16
+# this is the file your ourput and errors go to
+#SBATCH --output=./output.<specific analysis name>.txt
+#SBATCH --error=./error.<specific analysis name>.txt
+#SBATCH --qos=phyto
+
+/home/summerschool/anaconda3/envs/summerschool/bin/STAR --runThreadN 12 --runMode genomeGenerate --genomeDir < /path/to/genomeDir> \ 
+--genomeFastaFiles </path/to/genome/fasta1> 
+
+```
+
+## SBATCH file for STAR map
+
+```text
+#!/bin/bash
+# the name of your job
+#SBATCH --job-name=<job name>
+#SBATCH --cpus-per-task=16
+# this is the file your ourput and errors go to
+#SBATCH --output=./output.<specific analysis name>.txt
+#SBATCH --error=./error.<specific analysis name>.txt
+#SBATCH --qos=phyto
+
+/home/summerschool/anaconda3/envs/summerschool/bin/STAR
+
+```
