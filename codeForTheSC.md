@@ -342,6 +342,8 @@ BASENAME=$(basename $FASTA_FILE .fasta)
 ## SBATCH file for STAR map
 
 ```text
+
+
 #!/bin/bash
 # the name of your job
 #SBATCH --job-name=<job name>
@@ -351,6 +353,20 @@ BASENAME=$(basename $FASTA_FILE .fasta)
 #SBATCH --error=./error.<specific analysis name>.txt
 #SBATCH --qos=phyto
 
+# Define variables
+GENOME_DIR=<folder index destination>
+READ1=/home/summerschool/summerschoolFolder/assemblyFolder/DR-15_1.fq.gz
+READ2=/home/summerschool/summerschoolFolder/aseemblyFolder/DR-15_2.fq.gz
+THREADS=12
+
+# Run STAR in alignment mode
 /home/summerschool/anaconda3/envs/summerschool/bin/STAR
+     --runThreadN $THREADS \
+     --genomeDir $GENOME_DIR \
+     --readFilesCommand zcat \
+     --readFilesIn $READ1 $READ2 \
+     --alignIntronMax 2000 \
+     --alignMatesGapMax 2000 
+
 
 ```
