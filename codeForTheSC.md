@@ -335,7 +335,7 @@ BASENAME=$(basename $FASTA_FILE .fasta)
 #SBATCH --qos=phyto
 
 /home/summerschool/anaconda3/envs/summerschool/bin/STAR --runThreadN 12 --runMode genomeGenerate \
- --genomeDir < /path/to/genomeDir> --genomeFastaFiles </path/to/genome/fasta1> 
+ --genomeDir < /path/to/genomeDir> --genomeSAindexNbases 11 --genomeFastaFiles </path/to/genome/fasta1> 
 
 ```
 
